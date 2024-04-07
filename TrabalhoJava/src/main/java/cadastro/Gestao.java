@@ -108,6 +108,4 @@ public class Gestao {
         Deletar telaDeletar = new Deletar();
         telaDeletar.TelaDeletar();
     }
-//sim
-
 }

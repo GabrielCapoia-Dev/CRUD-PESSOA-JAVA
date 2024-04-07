@@ -7,8 +7,6 @@ public class Cadastrar extends JFrame {
 
     public void TelaCadastro(){
 
-        boolean visivel = false;
-
         // Nome da janela e dimensões
         JFrame tela = new JFrame("Cadastro");
         tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -101,9 +99,8 @@ public class Cadastrar extends JFrame {
         tela.add(painel);
 
         // Torna o painel visivel
-        tela.setVisible(visivel);
+        tela.setVisible(true);
     }
-
 
 }
 

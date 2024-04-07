@@ -7,7 +7,6 @@ public class Gestao {
 
 
     public void opcoesGestao() {
-        Cadastrar cadastrar = new Cadastrar();
 
 
         // Nome da janela e dimensões
@@ -52,6 +51,8 @@ public class Gestao {
         grid.gridwidth = 2;
         grid.anchor = GridBagConstraints.CENTER;
         painel.add(btnListar, grid);
+        btnListar.addActionListener(e -> acaoListar());
+
 
         // Botão Editar
         JButton btnEditar = new JButton("EDITAR");
@@ -60,6 +61,8 @@ public class Gestao {
         grid.gridwidth = 2;
         grid.anchor = GridBagConstraints.CENTER;
         painel.add(btnEditar, grid);
+        btnEditar.addActionListener(e -> acaoEditar());
+
 
         // Botão Deletar
         JButton btnDeletar = new JButton("DELETAR");
@@ -68,6 +71,7 @@ public class Gestao {
         grid.gridwidth = 2;
         grid.anchor = GridBagConstraints.CENTER;
         painel.add(btnDeletar, grid);
+        btnDeletar.addActionListener(e -> acaoDeletar());
 
         // Conecta o painel ao frame
         tela.add(painel);
@@ -88,6 +92,21 @@ public class Gestao {
         // Chama o método para exibir a tela de cadastro
         Cadastrar telaCadastro = new Cadastrar();
         telaCadastro.TelaCadastro();
+    }
+
+    public void acaoListar() {
+        Listar telaListar = new Listar();
+        telaListar.TelaListar();
+
+    }
+    public void acaoEditar() {
+        Editar telaEditar = new Editar();
+        telaEditar.TelaEditar();
+
+    }
+    public void acaoDeletar() {
+        Deletar telaDeletar = new Deletar();
+        telaDeletar.TelaDeletar();
     }
 
 
